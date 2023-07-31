@@ -68,11 +68,11 @@ export function parse(
         }
 
         // TODO: test deep equal instead of strict equal
-        if (Object.prototype.hasOwnProperty.call(object, key) && !isDeepEqual(value, object[key])) {
-          // Note that we could also test `if(key in object) {...}`
-          // or `if (object[key] !== 'undefined') {...}`, but that is slower.
-          throwDuplicateKey(key, start + 1)
-        }
+        // if (Object.prototype.hasOwnProperty.call(object, key) && !isDeepEqual(value, object[key])) {
+        //   // Note that we could also test `if(key in object) {...}`
+        //   // or `if (object[key] !== 'undefined') {...}`, but that is slower.
+        //   throwDuplicateKey(key, start + 1)
+        // }
 
         object[key] = value
       }
